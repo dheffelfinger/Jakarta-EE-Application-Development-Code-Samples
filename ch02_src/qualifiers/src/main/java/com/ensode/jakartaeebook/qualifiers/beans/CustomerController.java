@@ -5,27 +5,25 @@ import com.ensode.jakartaeebook.qualifiers.Premium;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import java.util.logging.Level;
 
 @Named
 @RequestScoped
 public class CustomerController {
 
-    private static final Logger logger = Logger.getLogger(
-            CustomerController.class.getName());
-    @Inject
-    @Premium
-    private Customer customer;
+  private static final Logger logger = Logger.getLogger(
+          CustomerController.class.getName());
+  @Inject
+  @Premium
+  private Customer customer;
 
-    public String saveCustomer() {
+  public String saveCustomer() {
 
-        PremiumCustomer premiumCustomer = (PremiumCustomer) customer;
+    PremiumCustomer premiumCustomer = (PremiumCustomer) customer;
 
-        logger.info("Saving the following information \n"
-                + premiumCustomer.getFirstName() + " "
-                + premiumCustomer.getLastName()
-                + ", discount code = "
-                + premiumCustomer.getDiscountCode());
+    logger.log(Level.INFO, "Saving the following information \n{0} {1}, discount code = {2}",
+            new Object[]{premiumCustomer.getFirstName(), premiumCustomer.getLastName(), premiumCustomer.getDiscountCode()});
 
-        return "confirmation";
-    }
+    return "confirmation";
+  }
 }
