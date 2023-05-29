@@ -1,7 +1,7 @@
-package com.ensode.javaee8book.qualifiers.beans;
+package com.ensode.jakartaeebook.qualifiers.beans;
 
 import java.util.logging.Logger;
-import com.ensode.javaee8book.qualifiers.Premium;
+import com.ensode.jakartaeebook.qualifiers.Premium;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;

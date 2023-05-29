@@ -1,4 +1,4 @@
-package com.ensode.javaee8book.qualifiers;
+package com.ensode.jakartaeebook.qualifiers;
 
 import jakarta.inject.Qualifier;
 import static java.lang.annotation.ElementType.TYPE;

@@ -1,4 +1,4 @@
-package com.ensode.javaee8book.qualifiers.beans;
+package com.ensode.jakartaeebook.qualifiers.beans;
 
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;

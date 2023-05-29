@@ -1,11 +1,11 @@
-package com.ensode.javaee8book.conversationscope.controller;
+package com.ensode.jakartaeebook.conversationscope.controller;
 
 import jakarta.enterprise.context.Conversation;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import java.io.Serializable;
-import com.ensode.javaee8book.conversationscope.model.Customer;
+import com.ensode.jakartaeebook.conversationscope.model.Customer;
 
 @Named
 @RequestScoped

@@ -1,4 +1,4 @@
-package com.ensode.javaee8book.conversationscope.model;
+package com.ensode.jakartaeebook.conversationscope.model;
 
 import jakarta.enterprise.context.ConversationScoped;
 import jakarta.inject.Named;
