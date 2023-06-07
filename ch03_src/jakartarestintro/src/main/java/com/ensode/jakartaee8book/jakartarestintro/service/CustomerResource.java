@@ -8,9 +8,13 @@ import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Path("customer")
 public class CustomerResource {
+
+  private static final Logger LOG = Logger.getLogger(CustomerResource.class.getName());
 
   @GET
   @Produces(MediaType.APPLICATION_JSON)
@@ -18,8 +22,7 @@ public class CustomerResource {
     //in a "real" RESTful service, we would retrieve data from a database
     //then return a JSON representation of the data.
 
-    System.out.println("--- " + this.getClass().getCanonicalName()
-            + ".getCustomer() invoked");
+    LOG.log(Level.INFO, "{0}.getCustomer() invoked", this.getClass().getCanonicalName());
 
     //Using a text block for readability
     //requires Java 15 or newer
@@ -47,10 +50,9 @@ public class CustomerResource {
     //received in the customer JSON parameter, then insert
     //a new row into the database.
 
-    System.out.println("--- " + this.getClass().getCanonicalName()
-            + ".createCustomer() invoked");
+    LOG.log(Level.INFO, "{0}.createCustomer() invoked", this.getClass().getCanonicalName());
 
-    System.out.println("customerJson = " + customerJson);
+    LOG.log(Level.INFO, "customerJson = {0}", customerJson);
   }
 
   @POST
@@ -60,10 +62,9 @@ public class CustomerResource {
     //received in the customer JSON parameter, then update
     //a row in the database.
 
-    System.out.println("--- " + this.getClass().getCanonicalName()
-            + ".updateCustomer() invoked");
+    LOG.log(Level.INFO, "{0}.updateCustomer() invoked", this.getClass().getCanonicalName());
 
-    System.out.println("customerJson = " + customerJson);
+    LOG.log(Level.INFO, "customerJson = {0}", customerJson);
   }
 
   @DELETE
@@ -73,9 +74,8 @@ public class CustomerResource {
     //received in the customer JSON parameter, then delete
     //a row in the database.
 
-    System.out.println("--- " + this.getClass().getCanonicalName()
-            + ".deleteCustomer() invoked");
+    LOG.log(Level.INFO, "{0}.deleteCustomer() invoked", this.getClass().getCanonicalName());
 
-    System.out.println("customerJson = " + customerJson);
+    LOG.log(Level.INFO, "customerJson = {0}", customerJson);
   }
 }
