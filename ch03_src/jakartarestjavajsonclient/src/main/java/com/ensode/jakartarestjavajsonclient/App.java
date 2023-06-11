@@ -14,7 +14,7 @@ public class App {
   }
 
   public void insertCustomer() {
-    Customer customer = new Customer(234L, "Tamara", "Adeline", "Graystone");
+    Customer customer = new Customer(456L, "Daniel", "Robert", "Hanson");
     Client client = ClientBuilder.newClient();
 
     client.target(

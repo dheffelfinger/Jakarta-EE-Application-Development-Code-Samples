@@ -1,8 +1,6 @@
 package com.ensode.jakartaeebook.javajson.entity;
 
-import java.io.Serializable;
-
-public class Customer implements Serializable {
+public class Customer {
 
   private Long id;
   private String firstName;

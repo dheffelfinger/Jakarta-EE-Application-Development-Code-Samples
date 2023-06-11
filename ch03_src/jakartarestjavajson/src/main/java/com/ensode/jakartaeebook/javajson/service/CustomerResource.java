@@ -12,10 +12,6 @@ import jakarta.ws.rs.core.MediaType;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author David R. Heffelfinger <dheffelfinger@ensode.com>
- */
 @Path("customer")
 public class CustomerResource {
 
@@ -31,20 +27,15 @@ public class CustomerResource {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public Customer getCustomer() {
-    //in a "real" RESTful service, we would retrieve data from a database
-    //then return an XML representation of the data.
-
     LOG.log(Level.INFO, "{0}.getCustomer() invoked", this.getClass().getCanonicalName());
 
+    //in a "real" RESTful service, we would retrieve data from a database
     return customer;
   }
 
   @POST
   @Consumes(MediaType.APPLICATION_JSON)
   public void updateCustomer(Customer customer) {
-    //in a "real" RESTful service, we would parse the XML
-    //received in the customer XML parameter, then update
-    //a row in the database.
 
     LOG.log(Level.INFO, "{0}.updateCustomer() invoked", this.getClass().getCanonicalName());
 
