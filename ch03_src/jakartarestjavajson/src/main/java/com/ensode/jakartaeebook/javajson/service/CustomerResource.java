@@ -2,7 +2,6 @@ package com.ensode.jakartaeebook.javajson.service;
 
 import com.ensode.jakartaeebook.javajson.entity.Customer;
 import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.PUT;
@@ -53,15 +52,5 @@ public class CustomerResource {
 
     LOG.log(Level.INFO, "customer = {0}", customer);
 
-  }
-
-  @DELETE
-  @Consumes(MediaType.APPLICATION_JSON)
-  public void deleteCustomer(Customer customer) {
-    //in a "real" RESTful service, we would delete a row
-    //from the database corresponding to the customer parameter
-    LOG.log(Level.INFO, "{0}.deleteCustomer() invoked", this.getClass().getCanonicalName());
-
-    LOG.log(Level.INFO, "customer = {0}", customer);
   }
 }
