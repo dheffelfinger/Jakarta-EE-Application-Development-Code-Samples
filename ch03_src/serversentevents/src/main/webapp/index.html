@@ -17,14 +17,11 @@
         <script>
             function getStockTickerValues() {
                 var source = new EventSource("resources/serversentevents/subscribe");
-                source.onmessage = function (event) {
-                    console.log("event received: " + event.data);
-                    document.getElementById("stickerVal").innerHTML = event.data;
-                };
-//                source.addEventListener('ENSD stock ticker value', function (event) {
-//                    document.getElementById("stickerVal").innerHTML = event.data;
-//                }, false);
 
+                source.addEventListener('ENSD stock ticker value', function (e) {
+                    console.log('event received', e);
+                    document.getElementById("stickerVal").innerHTML = event.data;
+                });
             }
         </script>
     </body>
