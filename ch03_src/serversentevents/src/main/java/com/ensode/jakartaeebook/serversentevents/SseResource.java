@@ -1,4 +1,4 @@
-package net.ensode.jakartaeebook.serversentevents;
+package com.ensode.jakartaeebook.serversentevents;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
