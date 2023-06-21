@@ -37,6 +37,13 @@ public class CustomerResource {
            """;
   }
 
+  @GET
+  @Produces(MediaType.TEXT_PLAIN)
+  @Path("customername")
+  public String getCustomerName() {
+    return "Joseph Graystone";
+  }
+
   /**
    * Create a new customer
    *
